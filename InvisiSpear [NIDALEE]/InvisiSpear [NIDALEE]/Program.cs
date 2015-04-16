@@ -56,12 +56,12 @@ namespace InvisiSpear__NIDALEE_
 
             if (Config.Item("invisispear.mode").GetValue<StringList>().SelectedIndex == 0)
             {
-                Game.PrintChat("INVISIBLE SPEAR ATTEMPT!, delaying by " + Game.Ping);
+                Game.PrintChat("INVISIBLE SPEAR ATTEMPT!For Damien, delaying by " + Game.Ping);
                 Utility.DelayAction.Add(Game.Ping, () => Q.CastIfHitchanceEquals(TargetSelector.GetTarget(1500f, TargetSelector.DamageType.Magical), HitChance.High));
             }
             else
             {
-                Game.PrintChat("INVISIBLE SPEAR ATTEMPT!, immediate casting");
+                Game.PrintChat("INVISIBLE SPEAR ATTEMPT!For Damien, immediate casting");
                 Utility.DelayAction.Add(1, () => Q.CastIfHitchanceEquals(TargetSelector.GetTarget(1500f, TargetSelector.DamageType.Magical), HitChance.High));
             }
         }
